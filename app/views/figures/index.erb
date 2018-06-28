@@ -1,0 +1,14 @@
+<h1>Figures:</h1>
+<% @figures.each do |fig| %>
+  <h2><%= fig.name %></h2>
+  <br>
+    <% fig.titles.each do |title|%>
+      <%= title.name %>
+    <% end %>
+  <br>
+    <% fig.landmarks.each do |lm|%>
+      <%= lm.name %>
+      <br>
+      <%= lm.year_completed %>
+    <% end %>
+<% end %>
