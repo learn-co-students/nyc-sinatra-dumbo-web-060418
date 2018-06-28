@@ -1,0 +1,16 @@
+<form action="/landmarks" method="post">
+  <label for="landmark_name"></label>
+  <input type="text" name="landmark[name]" id="landmark_name">
+  <br>
+  <label for="landmark_year_completed"></label>
+  <input type="text" name="landmark[year_completed]" id="landmark_year_completed">
+
+<select name="landmark[figure_id]">
+  <% @figures.each do |fig| %>
+    <option value="<%= fig.id %>"<%= fig.name %></option>
+  <% end %>
+</select>
+
+  <input type="submit" value="Create New Landmark">
+
+</form>
