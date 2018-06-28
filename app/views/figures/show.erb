@@ -1,0 +1,29 @@
+
+
+  <div>
+    <h3><u>Figure: <%=@figure.id%></u></h3>
+    <p style="text-indent: 20px"><u><i>Name</u>:</i> <%= @figure.name %></p>
+    <p style="text-indent: 20px"><u><i>Titles</u>:</i>
+    <%titles = @figure.titles.map {|title| title.name} %>
+    <%= titles.join(", ") %>
+
+    </p>
+    <p style="text-indent: 20px"><u><i>Landmarks</u>:</i>
+      <%landmarks = @figure.landmarks.map {|landmark| landmark.name} %>
+      <%= landmarks.join(", ") %>
+      </p>
+
+
+
+
+
+
+
+<%#
+    <p style="text-indent: 20px"><u><i>Ingredients</u>:</i> <%= @recipe.ingredients </p>
+%>
+<%#
+    <p style="text-indent: 20px"><u><i>Cook Time</u>:</i> <%= @recipe.cook_time.to_i  minutes</p>
+%>
+
+  </div>
